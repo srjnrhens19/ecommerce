@@ -245,6 +245,23 @@ function showRemoveSuccess(productName) {
   }, 1500);
 }
 
+function sendMessage(event) {
+  event.preventDefault();
+
+  // SHOW THE MODAL
+  const thankYouModalEl = document.getElementById('thankYouModal');
+  const thankYouModal = new bootstrap.Modal(thankYouModalEl);
+  thankYouModal.show();
+
+  setTimeout(() => {
+    thankYouModal.hide();
+  }, 1500);
+
+  // RESET THE FORM
+  document.getElementById('contact-form').reset();
+}
+
+
 // INITIALIZE CART DISPLAY
 displayCart();
 
